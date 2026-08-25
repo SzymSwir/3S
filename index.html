@@ -266,12 +266,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .auto{background:var(--krem-2);border-top:1px solid var(--linia);border-bottom:1px solid var(--linia)}
 .au-g{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:3.2rem}
 @media(max-width:860px){.au-g{grid-template-columns:1fr}}
-.au{background:#fff;border:1px solid var(--linia);border-left:3px solid var(--zloto);padding:clamp(24px,2.6vw,34px)}
-.au h3{font-family:var(--disp);font-size:1.32rem;font-weight:600;letter-spacing:-.03em;color:var(--ink);margin-bottom:1.1rem}
-.au-l{font-size:.92rem;line-height:1.6;color:var(--ink-2);margin-bottom:.85rem;padding-left:52px;position:relative}
-.au-l b{position:absolute;left:0;top:.15em;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
-.au-po b{color:var(--zielen)}
-.au-e{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--linia);font-size:.9rem;font-weight:600;color:var(--zielen);line-height:1.45}
+.au{background:#fff;border:1px solid var(--linia);padding:clamp(26px,2.8vw,36px);display:flex;flex-direction:column}
+.au-k{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--zloto);margin-bottom:12px}
+.au h3{font-family:var(--disp);font-size:1.3rem;font-weight:600;letter-spacing:-.03em;color:var(--ink);margin-bottom:.7rem}
+.au p{font-size:.94rem;line-height:1.6;color:var(--ink-2);margin:0;flex-grow:1}
+.au-w{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--linia)}
+.au-w b{display:block;font-family:var(--disp);font-size:clamp(1.6rem,2.6vw,2.05rem);font-weight:700;letter-spacing:-.04em;color:var(--zielen);line-height:1.05;margin-bottom:6px}
+.au-w span{font-size:.86rem;color:var(--ink-3);line-height:1.4}
 .au-n{font-family:var(--mono);font-size:.7rem;line-height:1.85;color:var(--ink-3);margin-top:24px;padding-left:14px;border-left:2px solid var(--linia);max-width:78ch}
 .of-nota{font-size:.82rem;line-height:1.65;color:var(--ink-2);margin:20px 0 0;padding-left:14px;border-left:2px solid var(--zloto);max-width:none}
 .of-nota b{color:var(--ink);font-weight:600}
@@ -598,17 +599,17 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
       </article>
 
       <article class="pas">
-        <span class="pas-o">Operacje</span>
+        <span class="pas-o">Dowożenie</span>
         <div class="pas-przed">
           <i>Przed</i>
-          <p>Raport powstaje ręcznie co tydzień. Dane z kilku źródeł i ryzyko pomyłek.</p>
+          <p>Zmiany startują z rozpędem, a po miesiącu wracają stare nawyki.</p>
         </div>
         <div class="pas-str"><span></span><b>→</b><span></span></div>
         <div class="pas-po">
           <i>Po</i>
-          <h3>Jeden uporządkowany przepływ informacji</h3>
-          <p>Najpierw upraszczamy proces, dopiero potem automatyzujemy.</p>
-          <span class="miernik">Miernik: czas przygotowania raportu</span>
+          <h3>Jedna ważna rzecz doprowadzona do końca co miesiąc</h3>
+          <p>Każda zmiana ma właściciela, termin i moment sprawdzenia.</p>
+          <span class="miernik">Miernik: zmiany dowiezione w kwartale</span>
         </div>
       </article>
 
@@ -811,36 +812,36 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
   <div class="wrap wej">
     <span class="et">Wdrożenie AI · przykłady</span>
     <h2>Co konkretnie <span class="zl">automatyzuję.</span></h2>
-    <p class="lead">Cztery rzeczy, które robię najczęściej. Jeśli rozpoznajesz u siebie
-    którąkolwiek z nich, to jest dokładnie ta rozmowa.</p>
+    <p class="lead">Cztery procesy, które automatyzuję najczęściej — i ile czasu z nich wraca.
+    Jeśli rozpoznajesz u siebie którykolwiek, to jest dokładnie ta rozmowa.</p>
 
     <div class="au-g">
       <article class="au">
+        <span class="au-k">Proces</span>
         <h3>Faktury od dostawców</h3>
-        <p class="au-l"><b>Dziś</b>Ktoś otwiera maile i przepisuje pozycje z PDF-ów do systemu. Przy okazji myli się przy cenach.</p>
-        <p class="au-l au-po"><b>Po</b>Faktura wpada, dane same trafiają do systemu, człowiek już tylko zatwierdza.</p>
-        <p class="au-e">15–30 godzin miesięcznie wraca do zespołu</p>
+        <p>Zamiast przepisywać pozycje z PDF-ów do systemu, człowiek tylko zatwierdza gotowy wpis.</p>
+        <div class="au-w"><b>15–30 h</b><span>miesięcznie wraca do zespołu</span></div>
       </article>
 
       <article class="au">
+        <span class="au-k">Sprzedaż</span>
         <h3>Wyceny i oferty</h3>
-        <p class="au-l"><b>Dziś</b>Jedna oferta to pół godziny przeklikiwania cennika i szukania, co wysłaliśmy poprzednio.</p>
-        <p class="au-l au-po"><b>Po</b>Wycena powstaje z cennika i historii, gotowy dokument w kilka minut, spójny za każdym razem.</p>
-        <p class="au-e">Przy dziesięciu ofertach tygodniowo — kilka dni pracy w miesiącu</p>
+        <p>Wycena powstaje z cennika i historii — gotowy dokument, spójny za każdym razem.</p>
+        <div class="au-w"><b>kilka minut</b><span>zamiast pół godziny na ofertę</span></div>
       </article>
 
       <article class="au">
-        <h3>Raport, który ktoś składa ręcznie</h3>
-        <p class="au-l"><b>Dziś</b>Pół dnia w tygodniu na zebranie liczb z kilku miejsc i sklejenie ich w arkuszu.</p>
-        <p class="au-l au-po"><b>Po</b>Dane zbierają się same, raport czeka w skrzynce o siódmej rano. Zawsze aktualny.</p>
-        <p class="au-e">Dwa dni pracy w miesiącu odzyskane</p>
+        <span class="au-k">Raportowanie</span>
+        <h3>Raport składany ręcznie</h3>
+        <p>Dane zbierają się same z kilku źródeł, raport czeka w skrzynce o siódmej rano.</p>
+        <div class="au-w"><b>2 dni</b><span>pracy w miesiącu odzyskane</span></div>
       </article>
 
       <article class="au">
+        <span class="au-k">Zespół</span>
         <h3>Wiedza firmowa w jednym miejscu</h3>
-        <p class="au-l"><b>Dziś</b>Nowa osoba pyta o wszystko starszych kolegów, a ci przestają robić swoje.</p>
-        <p class="au-l au-po"><b>Po</b>Procedury, cenniki i ustalenia w jednym asystencie, który odpowiada na pytania zespołu.</p>
-        <p class="au-e">Wdrożenie nowej osoby z tygodni do dni</p>
+        <p>Procedury, cenniki i ustalenia w jednym asystencie, który odpowiada na pytania zespołu.</p>
+        <div class="au-w"><b>dni, nie tygodnie</b><span>na wdrożenie nowej osoby</span></div>
       </article>
     </div>
 
