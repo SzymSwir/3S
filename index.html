@@ -353,10 +353,10 @@ details p{padding-bottom:26px;max-width:70ch;font-size:.98rem}
 .kto p{font-size:.88rem;line-height:1.5;margin:0}
 .kto p b{color:var(--krem);display:block;font-weight:600;font-size:.86rem;margin-bottom:2px}
 .kal{border:1px solid var(--linia-j);background:var(--krem);padding:clamp(10px,1.4vw,18px);min-height:640px}
-.kal-in{width:100%;min-height:620px;overflow:auto}
+.kal-in{width:100%;height:740px;border:0;display:block;background:var(--krem)}
 .kal-fb{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-3);padding:28px;text-align:center}
 .kal-fb a{color:var(--zloto)}
-@media(max-width:640px){.kal{min-height:560px}.kal-in{min-height:540px}}
+@media(max-width:640px){.kal{min-height:0}.kal-in{height:640px}}
 .kon-mail{font-size:.9rem;color:rgba(249,246,240,.55);margin-top:20px}
 .kon-mail a{color:var(--zloto-2);text-decoration:none;border-bottom:1px solid rgba(227,172,107,.4);padding-bottom:2px}
 .kon-mail a:hover{border-bottom-color:var(--zloto-2)}
@@ -910,10 +910,10 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
              Po zbudowaniu briefu w Tally ustawić w Cal.com przekierowanie
              po rezerwacji na adres briefu (patrz dokument 15, punkt 5).
              ================================================================ -->
-        <div class="kal-in" id="cal-3s">
-          <p class="kal-fb">Ładuję kalendarz… Jeśli się nie pojawi, napisz na
-          <a href="mailto:kontakt@3solution.pl">kontakt@3solution.pl</a>.</p>
-        </div>
+        <iframe class="kal-in" id="cal-3s"
+          src="https://cal.com/szymonswillo/diagnoza?embed=true&amp;layout=month_view&amp;theme=light"
+          title="Kalendarz — bezpłatna diagnoza, 30 minut"
+          loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
 
       <p class="kon-mail">Wolisz napisać?
@@ -1112,21 +1112,6 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
   })();
 
 })();
-</script>
-<script>
-(function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document;
-C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments;
-if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
-if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || [];
-if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); }
-else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "diagnoza", {origin: "https://app.cal.com"});
-Cal.ns.diagnoza("inline", {
-  elementOrSelector: "#cal-3s",
-  config: {"layout":"month_view","theme":"light"},
-  calLink: "szymonswillo/diagnoza"
-});
-Cal.ns.diagnoza("ui", {"hideEventTypeDetails":false,"layout":"month_view","theme":"light"});
 </script>
 </body>
 </html>
