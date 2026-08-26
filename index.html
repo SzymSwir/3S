@@ -352,11 +352,15 @@ details p{padding-bottom:26px;max-width:70ch;font-size:.98rem}
 .kto img{width:58px;height:58px;border-radius:50%;object-fit:cover;flex-shrink:0}
 .kto p{font-size:.88rem;line-height:1.5;margin:0}
 .kto p b{color:var(--krem);display:block;font-weight:600;font-size:.86rem;margin-bottom:2px}
-.kal{border:1px solid var(--linia-j);background:var(--krem);padding:clamp(10px,1.4vw,18px);min-height:640px}
-.kal-in{width:100%;height:740px;border:0;display:block;background:var(--krem)}
-.kal-fb{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-3);padding:28px;text-align:center}
-.kal-fb a{color:var(--zloto)}
-@media(max-width:640px){.kal{min-height:0}.kal-in{height:640px}}
+.kal{border:1px solid var(--linia-j);background:rgba(249,246,240,.04);padding:clamp(28px,3.2vw,40px)}
+.kal-e{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--zloto);display:block;margin-bottom:14px}
+.kal h3{font-family:var(--disp);font-size:clamp(1.5rem,2.2vw,1.85rem);font-weight:600;letter-spacing:-.03em;color:var(--krem);margin-bottom:1.4rem;line-height:1.15}
+.kal ul{list-style:none;margin:0 0 1.9rem;padding:0}
+.kal li{font-size:.92rem;line-height:1.55;color:rgba(249,246,240,.72);padding:9px 0 9px 20px;position:relative;border-bottom:1px solid var(--linia-j)}
+.kal li:last-child{border-bottom:0}
+.kal li::before{content:'';position:absolute;left:0;top:17px;width:7px;height:1px;background:var(--zloto)}
+.kal .btn{width:100%;justify-content:center;font-size:1rem;padding:17px 24px}
+.kal-sub{margin-top:14px;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(249,246,240,.42);text-align:center}
 .kon-mail{font-size:.9rem;color:rgba(249,246,240,.55);margin-top:20px}
 .kon-mail a{color:var(--zloto-2);text-decoration:none;border-bottom:1px solid rgba(227,172,107,.4);padding-bottom:2px}
 .kon-mail a:hover{border-bottom-color:var(--zloto-2)}
@@ -482,7 +486,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
       <a href="#rachunek">Test kierunku</a>
       <a href="#oferta">Oferta</a>
       <a href="#o-mnie">O mnie</a>
-      <a href="#kontakt" class="btn btn-sm">Bezpłatna diagnoza</a>
+      <a href="https://cal.com/szymonswillo/diagnoza" class="btn btn-sm" target="_blank" rel="noopener">Bezpłatna diagnoza</a>
     </div>
   </div>
 </nav>
@@ -497,7 +501,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
         sposobu działania i wdrażaniu rozwiązań, które przynoszą mierzalną wartość.
       </p>
       <div class="hero-akc">
-        <a href="#kontakt" class="btn">Umów bezpłatną diagnozę <span class="s">→</span></a>
+        <a href="https://cal.com/szymonswillo/diagnoza" class="btn" target="_blank" rel="noopener">Umów bezpłatną diagnozę <span class="s">→</span></a>
         <a href="#rachunek" class="btn btn-o">Zrób test kierunku <span class="s">↓</span></a>
       </div>
       <p class="hero-nota">30 minut · bez prezentacji sprzedażowej · z konkretnym następnym krokiem</p>
@@ -658,7 +662,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
         </div>
         <ul class="tk-li" id="tk-li"></ul>
         <div class="tk-cta">
-          <a href="#kontakt" class="btn">Umów bezpłatną diagnozę</a>
+          <a href="https://cal.com/szymonswillo/diagnoza" class="btn" target="_blank" rel="noopener">Umów bezpłatną diagnozę</a>
           <span class="tk-nota">30 minut · bez zobowiązań · rekomendacja zostaje Twoja</span>
         </div>
         <button type="button" class="tk-znowu" id="tk-znowu">Zrób test jeszcze raz</button>
@@ -743,7 +747,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
           <li>Możesz odejść z samym planem. Bez zobowiązań.</li>
         </ul></div>
         <p class="rez"><b>Co z tego masz</b>Pełny plan działania i kierunek na rok — z kolejnością i ceną każdego kroku.</p>
-        <a href="#kontakt" class="btn btn-c">Umów rozmowę</a>
+        <a href="https://cal.com/szymonswillo/diagnoza" class="btn btn-c" target="_blank" rel="noopener">Umów rozmowę</a>
       </div>
 
       <div class="ok wyr">
@@ -759,7 +763,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
         </ul></div>
         <p class="rez"><b>Co z tego masz</b>Decyzje przestają czekać na Ciebie. Firma idzie do przodu również wtedy, gdy Cię nie ma.</p>
         <p class="limit">Maksymalnie 6 firm jednocześnie</p>
-        <a href="#kontakt" class="btn">Umów rozmowę</a>
+        <a href="https://cal.com/szymonswillo/diagnoza" class="btn" target="_blank" rel="noopener">Umów rozmowę</a>
       </div>
 
       <div class="ok">
@@ -776,7 +780,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
           <span>Wyceny i oferty</span><span>Faktury od dostawców</span><span>Raporty automatyczne</span>
           <span>Wiedza firmowa</span><span>Agent głosowy</span><span>Custom GPT</span><span>n8n</span>
         </div>
-        <a href="#kontakt" class="btn btn-c">Umów rozmowę</a>
+        <a href="https://cal.com/szymonswillo/diagnoza" class="btn btn-c" target="_blank" rel="noopener">Umów rozmowę</a>
       </div>
     </div>
 
@@ -904,16 +908,19 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
 
     <div>
       <div class="kal">
-        <!-- ================================================================
-             KALENDARZ — Cal.com, osadzenie inline.
-             Konto: cal.com/szymonswillo · wydarzenie: /diagnoza (30 minut)
+        <!-- Rezerwacja: cal.com/szymonswillo/diagnoza (30 min).
              Po zbudowaniu briefu w Tally ustawić w Cal.com przekierowanie
-             po rezerwacji na adres briefu (patrz dokument 15, punkt 5).
-             ================================================================ -->
-        <iframe class="kal-in" id="cal-3s"
-          src="https://cal.com/szymonswillo/diagnoza?embed=true&amp;layout=month_view&amp;theme=light"
-          title="Kalendarz — bezpłatna diagnoza, 30 minut"
-          loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+             po rezerwacji na adres briefu — dokument 15, punkt 5. -->
+        <span class="kal-e">Krok 1 · rezerwacja</span>
+        <h3>Bezpłatna diagnoza<br>30 minut</h3>
+        <ul>
+          <li>Wideo albo telefon — jak wolisz</li>
+          <li>Bez prezentacji sprzedażowej</li>
+          <li>Notatka z diagnozą do doby po rozmowie</li>
+          <li>Zostaje u Ciebie niezależnie od decyzji</li>
+        </ul>
+        <a href="https://cal.com/szymonswillo/diagnoza" class="btn" target="_blank" rel="noopener">Wybierz termin</a>
+        <p class="kal-sub">Wolne terminy · rezerwacja w minutę</p>
       </div>
 
       <p class="kon-mail">Wolisz napisać?
