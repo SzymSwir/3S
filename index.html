@@ -352,14 +352,11 @@ details p{padding-bottom:26px;max-width:70ch;font-size:.98rem}
 .kto img{width:58px;height:58px;border-radius:50%;object-fit:cover;flex-shrink:0}
 .kto p{font-size:.88rem;line-height:1.5;margin:0}
 .kto p b{color:var(--krem);display:block;font-weight:600;font-size:.86rem;margin-bottom:2px}
-.kal{border:1px solid var(--linia-j);background:var(--granat);min-height:420px;display:flex}
-.kal-ph{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-  padding:clamp(28px,3.4vw,44px);border:1px dashed rgba(200,135,63,.45);margin:12px}
-.kal-e{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--zloto);margin-bottom:14px}
-.kal-ph b{font-family:var(--disp);font-size:1.6rem;font-weight:600;letter-spacing:-.03em;color:var(--krem);margin-bottom:.7rem}
-.kal-ph p{font-size:.92rem;line-height:1.6;color:rgba(249,246,240,.6);margin:0;max-width:44ch}
-.kal-note{margin-top:20px;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--zloto);border:1px solid rgba(200,135,63,.4);padding:7px 12px}
+.kal{border:1px solid var(--linia-j);background:var(--krem);padding:clamp(10px,1.4vw,18px);min-height:640px}
+.kal-in{width:100%;min-height:620px;overflow:auto}
+.kal-fb{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-3);padding:28px;text-align:center}
+.kal-fb a{color:var(--zloto)}
+@media(max-width:640px){.kal{min-height:560px}.kal-in{min-height:540px}}
 .kon-mail{font-size:.9rem;color:rgba(249,246,240,.55);margin-top:20px}
 .kon-mail a{color:var(--zloto-2);text-decoration:none;border-bottom:1px solid rgba(227,172,107,.4);padding-bottom:2px}
 .kon-mail a:hover{border-bottom-color:var(--zloto-2)}
@@ -908,20 +905,14 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
     <div>
       <div class="kal">
         <!-- ================================================================
-             KALENDARZ — tutaj wklej kod osadzenia z Cal.com.
-             1. Załóż darmowe konto na cal.com i utwórz typ spotkania
-                „Bezpłatna diagnoza · 30 minut”.
-             2. Skopiuj kod „inline embed” i wklej go w miejsce bloku
-                <div class="kal-ph"> ... </div> poniżej.
-             3. W ustawieniach spotkania ustaw przekierowanie po rezerwacji
-                na stronę z briefem (patrz dokument 15).
+             KALENDARZ — Cal.com, osadzenie inline.
+             Konto: cal.com/szymonswillo · wydarzenie: /diagnoza (30 minut)
+             Po zbudowaniu briefu w Tally ustawić w Cal.com przekierowanie
+             po rezerwacji na adres briefu (patrz dokument 15, punkt 5).
              ================================================================ -->
-        <div class="kal-ph">
-          <span class="kal-e">Kalendarz · wolne terminy</span>
-          <b>Wybierz termin</b>
-          <p>Tutaj stanie kalendarz z moimi wolnymi terminami. Wybierasz godzinę,
-          zostawiasz kontakt — i od razu dostajesz link do pięciominutowego przygotowania.</p>
-          <span class="kal-note">Miejsce na kalendarz — do podpięcia</span>
+        <div class="kal-in" id="cal-3s">
+          <p class="kal-fb">Ładuję kalendarz… Jeśli się nie pojawi, napisz na
+          <a href="mailto:kontakt@3solution.pl">kontakt@3solution.pl</a>.</p>
         </div>
       </div>
 
@@ -1121,6 +1112,21 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
   })();
 
 })();
+</script>
+<script>
+(function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document;
+C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments;
+if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || [];
+if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); }
+else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "diagnoza", {origin: "https://app.cal.com"});
+Cal.ns.diagnoza("inline", {
+  elementOrSelector: "#cal-3s",
+  config: {"layout":"month_view","theme":"light"},
+  calLink: "szymonswillo/diagnoza"
+});
+Cal.ns.diagnoza("ui", {"hideEventTypeDetails":false,"layout":"month_view","theme":"light"});
 </script>
 </body>
 </html>
