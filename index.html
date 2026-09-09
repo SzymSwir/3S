@@ -285,6 +285,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .om-t b{font-family:var(--disp);font-size:1.05rem;font-weight:600;letter-spacing:-.02em;display:block;margin-bottom:4px}
 .om-t span{font-size:.82rem;color:var(--ink-2);line-height:1.4;display:block}
 .om-c{font-family:var(--mono);font-size:.86rem;color:var(--zloto);white-space:nowrap;font-weight:500}
+.om-link{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--zloto);text-decoration:none;border-bottom:1px solid rgba(200,135,63,.35);padding-bottom:2px}
+.om-link:hover{border-bottom-color:var(--zloto)}
 
 /* ---------- PAS KROK 0 ---------- */
 .krok0{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(24px,4vw,56px);align-items:center;
@@ -380,6 +382,8 @@ details p{padding-bottom:26px;max-width:70ch;font-size:.98rem}
 footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
 .stopka{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
 .stopka p{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:rgba(249,246,240,.4)}
+.stopka-linki a{color:rgba(249,246,240,.62);text-decoration:none;border-bottom:1px solid rgba(249,246,240,.22);transition:color .2s,border-color .2s}
+.stopka-linki a:hover{color:var(--krem);border-bottom-color:var(--krem)}
 .stopka-fi{text-align:right;line-height:1.9}
 .stopka-fi a{color:rgba(249,246,240,.62);border-bottom:1px solid rgba(249,246,240,.22);transition:color .2s,border-color .2s}
 .stopka-fi a:hover{color:var(--krem);border-bottom-color:var(--krem)}
@@ -440,38 +444,186 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
 </style>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@type":"Person",
-      "@id":"#szymon",
-      "name":"Szymon Świłło",
-      "jobTitle":"Partner Wykonawczy — dyrektor operacyjny na godziny",
-      "description":"Przedsiębiorca z ponad 12-letnim doświadczeniem w operacjach, technologii i rozwoju biznesu. Wspiera właścicieli firm w podejmowaniu decyzji i wdrażaniu zmian.",
-      "worksFor":{"@id":"#3s"}
+      "@type": "Person",
+      "@id": "#szymon",
+      "name": "Szymon Świłło",
+      "jobTitle": "Partner Wykonawczy — dyrektor operacyjny na godziny",
+      "description": "Przedsiębiorca z ponad 12-letnim doświadczeniem w operacjach, technologii i rozwoju biznesu. Wspiera właścicieli firm w podejmowaniu decyzji i wdrażaniu zmian.",
+      "worksFor": {
+        "@id": "#3s"
+      },
+      "url": "https://3solution.pl/#o-mnie",
+      "sameAs": [
+        "https://www.linkedin.com/in/szymon-%C5%9Bwi%C5%82%C5%82o/",
+        "https://coaching3s.pl/"
+      ]
     },
     {
-      "@type":"ProfessionalService",
-      "@id":"#3s",
-      "name":"3S — Partner Wykonawczy",
-      "url":"https://3solution.pl/",
-      "email":"kontakt@3solution.pl",
-      "description":"Dyrektor operacyjny na godziny dla firm, które potrzebują decyzji i wdrożeń, a nie kolejnego etatu. Diagnoza, decyzja, wdrożenie.",
-      "founder":{"@id":"#szymon"},
-      "areaServed":{"@type":"Country","name":"Polska"},
-      "address":{"@type":"PostalAddress","addressCountry":"PL"},
-      "priceRange":"590–15000 PLN",
-      "knowsAbout":["dyrektor operacyjny na godziny","wdrożenia AI w firmie","automatyzacja procesów","wsparcie zarządu","doradztwo operacyjne","usprawnianie procesów","wdrażanie zmian w firmie"],
-      "hasOfferCatalog":{
-        "@type":"OfferCatalog","name":"Usługi 3S",
-        "itemListElement":[
-          {"@type":"Offer","name":"Bezpłatna diagnoza","price":"0","priceCurrency":"PLN"},
-          {"@type":"Offer","name":"Sprint Kierunku","price":"8000","priceCurrency":"PLN"},
-          {"@type":"Offer","name":"Partnerstwo 3S","price":"9000","priceCurrency":"PLN"},
-          {"@type":"Offer","name":"Wdrożenie AI","price":"5000","priceCurrency":"PLN"},
-          {"@type":"Offer","name":"Serwis i rozwój","price":"2500","priceCurrency":"PLN"},
-          {"@type":"Offer","name":"Sparing Decyzyjny","price":"590","priceCurrency":"PLN"}
+      "@type": "ProfessionalService",
+      "@id": "#3s",
+      "name": "3S — Partner Wykonawczy",
+      "url": "https://3solution.pl/",
+      "email": "kontakt@3solution.pl",
+      "description": "Dyrektor operacyjny na godziny dla firm, które potrzebują decyzji i wdrożeń, a nie kolejnego etatu. Diagnoza, decyzja, wdrożenie.",
+      "founder": {
+        "@id": "#szymon"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Polska"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PL"
+      },
+      "priceRange": "590–15000 PLN",
+      "knowsAbout": [
+        "dyrektor operacyjny na godziny",
+        "wdrożenia AI w firmie",
+        "automatyzacja procesów",
+        "wsparcie zarządu",
+        "doradztwo operacyjne",
+        "usprawnianie procesów",
+        "wdrażanie zmian w firmie"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Usługi 3S",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Bezpłatna diagnoza",
+            "price": "0",
+            "priceCurrency": "PLN"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sprint Kierunku",
+            "price": "8000",
+            "priceCurrency": "PLN"
+          },
+          {
+            "@type": "Offer",
+            "name": "Partnerstwo 3S",
+            "price": "9000",
+            "priceCurrency": "PLN"
+          },
+          {
+            "@type": "Offer",
+            "name": "Wdrożenie AI",
+            "price": "5000",
+            "priceCurrency": "PLN"
+          },
+          {
+            "@type": "Offer",
+            "name": "Serwis i rozwój",
+            "price": "2500",
+            "priceCurrency": "PLN"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sparing Decyzyjny",
+            "price": "590",
+            "priceCurrency": "PLN"
+          }
         ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/szymon-%C5%9Bwi%C5%82%C5%82o/",
+        "https://coaching3s.pl/"
+      ],
+      "logo": "https://3solution.pl/og.jpg",
+      "image": "https://3solution.pl/og.jpg"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czym dyrektor operacyjny na godziny różni się od interim managera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interim manager wchodzi na pełny etat na czas określony i zwykle kogoś zastępuje. Ja pracuję dla Twojej firmy cztery dni w miesiącu i nikogo nie zastępuję — dokładam brakującą rolę decyzyjną tam, gdzie dziś wszystko czeka na właściciela."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile jesteś dostępny i jak wygląda Twoja obecność w firmie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tydzień wygląda tak samo przez cały kwartał: jeden dzień roboczy przeznaczony na Twoją firmę — praca nad procesami, wdrożeniami i decyzjami operacyjnymi — oraz 90 minut wyłącznie z Tobą w osobnym stałym terminie, na przegląd decyzji i priorytety na kolejny tydzień. Ten dzień spędzam na miejscu wtedy, gdy sytuacja tego wymaga — start wdrożenia, rozmowy z zespołem, trudna decyzja. Kiedy praca tego nie potrzebuje, robię ją zdalnie, bo wtedy zwyczajnie więcej z niej wychodzi. Między tym kontakt mailowy z odpowiedzią do doby, a w sprawach pilnych telefon. W miesiącu daje to cztery dni w firmie i sześć godzin rozmowy z właścicielem. Stały rytm jest połową wartości: bez niego terminy przesuwają się przy pierwszym pożarze i po kwartale nic się nie zmienia. Prowadzę maksymalnie sześć firm jednocześnie . To nie jest zabieg marketingowy — przy większej liczbie nie znałbym kontekstu żadnej z nich na tyle, żeby podejmować decyzje operacyjne zamiast Ciebie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kiedy to ma sens zamiast zatrudnienia dyrektora operacyjnego na etat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gdy firma potrzebuje decyzji i porządku, ale nie ma jeszcze skali na pełny etat — albo gdy nie wiadomo, jakiej dokładnie roli szukać. Po kilku miesiącach zwykle wiadomo jedno i drugie, a rekrutacja staje się dużo prostsza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy 3S jest doradcą czy wykonawcą?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Łączę obie role. Najpierw pomagam podjąć dobrą decyzję, a potem wdrażam rozwiązanie albo prowadzę zespół przez wdrożenie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy muszę wiedzieć, jakiego narzędzia potrzebuję?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. Wystarczy konkretny problem, który zabiera czas, pieniądze albo uwagę. Dobór rozwiązania jest częścią pracy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy wdrażasz AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak — gdy ma jasne zastosowanie, odpowiednie dane i mierzalny sens biznesowy. AI jest narzędziem, nie celem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy to nie jest kolejna moda na AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uzasadniona obawa. Dlatego nie sprzedaję technologii, tylko odzyskane godziny — policzone przed wdrożeniem i po nim, na tych samych liczbach. Narzędzie dobieram sam i czasem okazuje się, że wystarczy zmiana sposobu pracy bez żadnego AI. Jeśli po pomiarze nie widać różnicy, wdrożenie było nieudane i tak to nazywam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy możesz wykorzystać systemy, które już mamy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Najpierw sprawdzam, czy obecne narzędzia można lepiej skonfigurować lub połączyć. Nowe proponuję dopiero wtedy, gdy to konieczne."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co otrzymam po pierwszym płatnym etapie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Konkretny rezultat: mapę decyzji lub diagnozę z priorytetami, miernikami i planem. Nie samą rozmowę i nie prezentację."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "#site",
+      "url": "https://3solution.pl/",
+      "name": "3S — Partner Wykonawczy",
+      "inLanguage": "pl-PL",
+      "publisher": {
+        "@id": "#3s"
       }
     }
   ]
@@ -496,6 +648,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
       <a href="#rachunek">Test kierunku</a>
       <a href="#oferta">Oferta</a>
       <a href="#o-mnie">O mnie</a>
+      <a href="/blog/">Blog</a>
       <a href="https://cal.com/szymonswillo/diagnoza" class="btn btn-sm" target="_blank" rel="noopener">Bezpłatna diagnoza</a>
     </div>
   </div>
@@ -808,7 +961,8 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
       </div>
       <div class="om">
         <div class="om-t"><i>Najmniejszy pierwszy krok</i><b>Sparing Decyzyjny</b>
-        <span>90 minut na jednej decyzji · pisemna rekomendacja po rozmowie · termin w pięć dni roboczych.</span></div>
+        <span>90 minut na jednej decyzji · pisemna rekomendacja po rozmowie · termin w pięć dni roboczych.
+        <a href="https://coaching3s.pl/" class="om-link">Więcej o sparingu dla właścicieli firm →</a></span></div>
         <div class="om-c">590 zł</div>
       </div>
     </div>
@@ -929,7 +1083,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
       </svg>
       <span class="znak-t">Partner<br>transformacji</span>
     </a>
-    <p>Decyzje · Operacje · Transformacja</p>
+    <p class="stopka-linki"><a href="https://coaching3s.pl/">Sparingpartner dla właścicieli firm</a> · <a href="/blog/">Blog</a> · <a href="https://www.linkedin.com/in/szymon-%C5%9Bwi%C5%82%C5%82o/" rel="me">LinkedIn</a></p>
     <p class="stopka-fi">Szymon Świłło Solution · NIP 7773113856<br>
       <a href="/polityka-prywatnosci.html">Polityka prywatności</a> · © 2026 3S</p>
   </div>
