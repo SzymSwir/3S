@@ -338,6 +338,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .poz-t{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--zloto);display:block;margin-bottom:10px}
 .poz.mocny{border-color:rgba(200,135,63,.55);background:rgba(200,135,63,.06)}
 
+/* ---------- OFERTA v3.1: kupujesz / dostajesz / zyskujesz ---------- */
+.kdz{border-top:1px solid var(--linia);padding-top:1rem;margin-bottom:1rem}
+.kdz em{font-style:normal;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:8px}
+.kdz p{font-size:.92rem;line-height:1.55;color:var(--ink-2);margin:0}
+.kdz ul{list-style:none;margin:0}
+.kdz li{font-size:.9rem;color:var(--ink-2);padding:4px 0 4px 18px;position:relative;line-height:1.5}
+.kdz li:before{content:"";position:absolute;left:0;top:13px;width:7px;height:1px;background:var(--zloto)}
+.ok.wyr .kdz{border-color:var(--linia-j)}
+.ok.wyr .kdz em{color:rgba(249,246,240,.42)}
+.ok.wyr .kdz p,.ok.wyr .kdz li{color:rgba(249,246,240,.72)}
+.ok .rez{border-top:1px solid var(--linia);padding-top:1rem}
+.ok.wyr .rez{border-color:var(--linia-j)}
+.ok>p.limit{font-size:.64rem;margin-bottom:1.3rem}
+.of3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.of3{grid-template-columns:1fr}}
+.of-solo{margin-top:22px;padding:22px clamp(22px,2.6vw,32px);background:#fff;border:1px solid var(--linia);border-left:3px solid var(--zloto);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.of-solo p{margin:0;font-size:.98rem;color:var(--ink);max-width:70ch}
+.of-solo p b{font-weight:600}
+
 /* ---------- PAS KROK 0 ---------- */
 .krok0{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(24px,4vw,56px);align-items:center;
   margin-top:3.4rem;padding:clamp(26px,3vw,38px);background:#fff;border:1px solid var(--linia);
@@ -517,7 +536,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
       "name": "3S — dyrektor operacyjny i AI na godziny",
       "url": "https://3solution.pl/",
       "email": "kontakt@3solution.pl",
-      "description": "Wdrożenia AI i automatyzacji procesów w firmach: oferty, maile, dokumenty, raporty, wiedza firmowa. Sprint Kierunku i AI, wdrożenia o stałej cenie i stała współpraca. Efekt mierzony przed i po.",
+      "description": "Wdrożenia AI i automatyzacji procesów w firmach: oferty, maile, dokumenty, raporty, wiedza firmowa. Trzy kroki: bezpłatna diagnoza, Sprint AI i Partnerstwo 3S. Efekt mierzony przed i po.",
       "founder": {
         "@id": "#szymon"
       },
@@ -529,7 +548,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
         "@type": "PostalAddress",
         "addressCountry": "PL"
       },
-      "priceRange": "1500–15000 PLN",
+      "priceRange": "0–10000 PLN",
       "knowsAbout": [
         "wdrożenia AI w firmie",
         "automatyzacja procesów",
@@ -553,63 +572,27 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
           },
           {
             "@type": "Offer",
-            "name": "Sprint Kierunku i AI",
+            "name": "Sprint AI",
             "price": "8000",
             "priceCurrency": "PLN"
           },
           {
             "@type": "Offer",
-            "name": "Wdrożenie AI — Start",
+            "name": "Partnerstwo 3S",
+            "priceCurrency": "PLN",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": "7000",
+              "maxPrice": "10000",
+              "priceCurrency": "PLN",
+              "unitText": "miesiąc"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Wdrożenie AI (jednorazowe)",
             "price": "6900",
             "priceCurrency": "PLN"
-          },
-          {
-            "@type": "Offer",
-            "name": "Wdrożenie AI — Proces",
-            "price": "11900",
-            "priceCurrency": "PLN"
-          },
-          {
-            "@type": "Offer",
-            "name": "Wdrożenie AI — Indywidualne",
-            "price": "15000",
-            "priceCurrency": "PLN"
-          },
-          {
-            "@type": "Offer",
-            "name": "Opieka AI",
-            "price": "1500",
-            "priceCurrency": "PLN",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "1500",
-              "priceCurrency": "PLN",
-              "unitText": "miesiąc"
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Partnerstwo 3S — Partner",
-            "price": "7500",
-            "priceCurrency": "PLN",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "7500",
-              "priceCurrency": "PLN",
-              "unitText": "miesiąc"
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Partnerstwo 3S — Partner Wykonawczy",
-            "price": "11900",
-            "priceCurrency": "PLN",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "11900",
-              "priceCurrency": "PLN",
-              "unitText": "miesiąc"
-            }
           }
         ]
       },
@@ -637,7 +620,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
           "name": "Ile jesteś dostępny i jak wygląda Twoja obecność w firmie?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Rytm jest stały przez cały kwartał. W Partnerstwie na poziomie Partner to dwa dni robocze w miesiącu i 90 minut z Tobą co dwa tygodnie. Na poziomie Partner Wykonawczy — jeden dzień w tygodniu i 90 minut co tydzień, w osobnym stałym terminie, na przegląd decyzji i priorytety. Na miejscu jestem wtedy, gdy sytuacja tego wymaga — start wdrożenia, rozmowy z zespołem, trudna decyzja. Kiedy praca tego nie potrzebuje, robię ją zdalnie, bo wtedy zwyczajnie więcej z niej wychodzi. Stały rytm jest połową wartości: bez niego terminy przesuwają się przy pierwszym pożarze i po kwartale nic się nie zmienia. Prowadzę maksymalnie sześć firm jednocześnie. To nie jest zabieg marketingowy — przy większej liczbie nie znałbym kontekstu żadnej z nich na tyle, żeby podejmować decyzje operacyjne zamiast Ciebie."
+            "text": "Rytm jest stały przez cały kwartał i wybierasz go na starcie: co dwa tygodnie — dwa dni robocze w miesiącu i 90 minut z Tobą co dwa tygodnie — albo co tydzień — jeden dzień w tygodniu i 90 minut z Tobą co tydzień, w osobnym stałym terminie, na przegląd decyzji i priorytety. Na miejscu jestem wtedy, gdy sytuacja tego wymaga — start wdrożenia, rozmowy z zespołem, trudna decyzja. Kiedy praca tego nie potrzebuje, robię ją zdalnie, bo wtedy zwyczajnie więcej z niej wychodzi. Stały rytm jest połową wartości: bez niego terminy przesuwają się przy pierwszym pożarze i po kwartale nic się nie zmienia. Prowadzę maksymalnie sześć firm jednocześnie. To nie jest zabieg marketingowy — przy większej liczbie nie znałbym kontekstu żadnej z nich na tyle, żeby podejmować decyzje operacyjne zamiast Ciebie."
           }
         },
         {
@@ -686,6 +669,14 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Przed dostępem do danych podpisujemy umowę o poufności i powierzenie danych. Pracuję na kontach Twojej firmy, z minimalnymi uprawnieniami i tylko na danych, których proces naprawdę potrzebuje. Wszystko, co wychodzi do klienta albo dotyczy pieniędzy, zatwierdza człowiek."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy mogę zamówić samo wdrożenie, bez Partnerstwa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Jeden proces za stałą cenę od 6 900 zł, ustaloną przed startem — z pomiarem przed i po oraz 90 dniami gwarancji w cenie. Po gwarancji możesz zostać pod moją opieką od 1 500 zł miesięcznie albo dalej prowadzić to sam."
           }
         },
         {
@@ -814,26 +805,26 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
   <div class="wrap wej">
     <span class="et">Co automatyzuję</span>
     <h2>Sześć miejsc, w których AI najczęściej <span class="zl">oddaje firmie godziny.</span></h2>
-    <p class="lead">Każde z nich zaczynam od policzenia, ile kosztuje dziś. Jeśli liczby mówią, że nie warto — mówię to wprost.</p>
+    <p class="lead">Przy każdym najpierw liczę, ile kosztuje Cię dziś, a po wdrożeniu — ile odzyskałeś. Jeśli liczby mówią, że nie warto, mówię to wprost.</p>
     <div class="au">
       <article class="ak"><em>01</em><h3>Oferty i wyceny</h3>
         <p>Zapytanie zamienia się w szkic oferty z Twojego cennika w kilka minut. Handlowiec sprawdza i wysyła.</p>
-        <span class="miernik">Mierzę: <b>czas od zapytania do wysłania oferty</b></span></article>
+        <span class="miernik">Zyskujesz: <b>oferta wychodzi tego samego dnia, nie jutro</b></span></article>
       <article class="ak"><em>02</em><h3>Skrzynka i zapytania</h3>
-        <p>Maile są sortowane, odpowiedzi szkicowane, nic nie ginie między osobami.</p>
-        <span class="miernik">Mierzę: <b>czas odpowiedzi, zapytania bez odpowiedzi</b></span></article>
+        <p>Maile trafiają do właściwej osoby, a odpowiedzi czekają już naszkicowane.</p>
+        <span class="miernik">Zyskujesz: <b>żadne zapytanie nie ginie między osobami</b></span></article>
       <article class="ak"><em>03</em><h3>Dokumenty i faktury</h3>
         <p>Dane z PDF-ów trafiają do systemu bez przepisywania, z kontrolą sum.</p>
-        <span class="miernik">Mierzę: <b>godziny przepisywania, liczbę błędów</b></span></article>
+        <span class="miernik">Zyskujesz: <b>nikt już nie przepisuje faktur ręcznie</b></span></article>
       <article class="ak"><em>04</em><h3>Raporty</h3>
         <p>W poniedziałek rano raport z liczbami i krótkim komentarzem jest w Twojej skrzynce.</p>
-        <span class="miernik">Mierzę: <b>czas przygotowania raportu</b></span></article>
+        <span class="miernik">Zyskujesz: <b>znasz wyniki w poniedziałek rano, bez składania Excela</b></span></article>
       <article class="ak"><em>05</em><h3>Wiedza firmowa</h3>
         <p>Asystent odpowiada zespołowi na pytania na podstawie Waszych dokumentów, zawsze ze źródłem.</p>
-        <span class="miernik">Mierzę: <b>pytania, które trafiają do Ciebie lub kierownika</b></span></article>
+        <span class="miernik">Zyskujesz: <b>zespół mniej pyta Ciebie, a więcej robi</b></span></article>
       <article class="ak"><em>06</em><h3>Leady i follow-upy</h3>
         <p>Nikt nie zostaje bez odpowiedzi: przypomnienia i szkice wiadomości do osób, które ucichły.</p>
-        <span class="miernik">Mierzę: <b>leady bez kontaktu po 7 dniach</b></span></article>
+        <span class="miernik">Zyskujesz: <b>żaden potencjalny klient nie stygnie bez odpowiedzi</b></span></article>
     </div>
     <p class="au-pas"><b>Człowiek zatwierdza wszystko,</b> co wychodzi do klienta, dotyczy pieniędzy albo danych osobowych.</p>
     <p class="au-narz">Buduję sam — w n8n, Make, na modelach OpenAI i Claude, w Google Workspace, Microsoft 365 i w Twoim CRM lub ERP przez API. Narzędzie dobieram do procesu, nie odwrotnie.</p>
@@ -990,7 +981,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
       <div class="mk2">
         <em>01</em>
         <h3>Ile jestem w firmie</h3>
-        <p>Zależnie od poziomu Partnerstwa: <b>dwa albo cztery dni robocze w miesiącu</b> przeznaczone
+        <p>Zależnie od rytmu Partnerstwa: <b>dwa albo cztery dni robocze w miesiącu</b> przeznaczone
         na Twoją firmę i <b>90 minut z Tobą w stałym terminie</b> — co dwa tygodnie albo co tydzień.
         Terminy wpisane do kalendarzy na kwartał z góry. Na miejscu jestem wtedy, gdy wymaga tego
         sytuacja: wdrożenie, rozmowy z zespołem, trudna decyzja.</p>
@@ -1023,99 +1014,57 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
 <section id="oferta">
   <div class="wrap wej">
     <span class="et">Oferta</span>
-    <h2>Cztery kroki. <span class="zl">Wchodzisz tak głęboko, jak potrzebujesz.</span></h2>
-    <p class="lead">Każdy krok ma stałą cenę, zakres i termin. Większość firm zaczyna od diagnozy, potem od Sprintu albo jednego wdrożenia.</p>
+    <h2>Trzy kroki. <span class="zl">Wiesz, co kupujesz i co zyskujesz.</span></h2>
+    <p class="lead">Przy każdym kroku jedna cena, jasny zakres i konkretny rezultat. Po każdym możesz się zatrzymać.</p>
 
-    <a href="#kontakt" class="krok0">
-      <div class="k0-l">
-        <span class="k0-e">Krok 0 · zaczynasz tutaj</span>
-        <b>Bezpłatna diagnoza</b>
-        <span class="k0-o">30 minut rozmowy, poprzedzonej krótką ankietą — dzięki niej od razu rozmawiamy
-        o konkretach. Do doby dostajesz notatkę: co jest przyczyną, a co objawem, i trzy rzeczy do zrobienia
-        w 30 dni. Zostaje u Ciebie niezależnie od decyzji.</span>
-      </div>
-      <div class="k0-p">
-        <span class="btn">Umów się <span class="s">→</span></span>
-      </div>
-    </a>
-
-    <div class="of of2">
+    <div class="of of3">
       <div class="ok">
-        <span class="of-l">Krok 1 · audyt jednorazowy</span>
-        <h3>Sprint Kierunku i AI</h3>
+        <span class="of-l">Krok 1 · na start</span>
+        <h3>Bezpłatna diagnoza</h3>
+        <div class="cena">0 zł <s>· 30 minut</s></div>
+        <div class="kdz"><em>Kupujesz</em><p>30 minut rozmowy, poprzedzonej krótką ankietą, żebyśmy od razu mówili o konkretach.</p></div>
+        <div class="kdz"><em>Dostajesz</em><p>Notatkę na jednej stronie, do doby: gdzie firma traci najwięcej czasu i pieniędzy, plus trzy rzeczy do zrobienia w 30 dni.</p></div>
+        <p class="rez"><b>Zyskujesz</b>Wiesz, czy AI ma u Ciebie sens — zanim wydasz złotówkę.</p>
+        <a href="https://cal.com/szymonswillo/diagnoza" class="btn btn-c" target="_blank" rel="noopener">Umów diagnozę</a>
+      </div>
+
+      <div class="ok">
+        <span class="of-l">Krok 2 · jednorazowo</span>
+        <h3>Sprint AI</h3>
         <div class="cena">8 000 zł <s>netto · 3 tygodnie</s></div>
-        <div class="zakres"><ul>
-          <li><b>Mapa firmy na jednej stronie</b> — jak naprawdę płynie praca, informacja i pieniądze.</li>
-          <li><b>5–7 miejsc do usprawnienia lub automatyzacji</b>, każde policzone w godzinach i złotówkach.</li>
-          <li><b>Plan na 12 miesięcy</b> — co, w jakiej kolejności, kto, do kiedy.</li>
-          <li><b>Wycena każdego wdrożenia z góry</b>, ważna 6 miesięcy. Możesz odejść z samym planem.</li>
-          <li>Prezentacja dla Ciebie i zarządu z nagraniem oraz <b>trzy rzeczy do zrobienia w 14 dni</b> bez mnie.</li>
-          <li><b>Całe 8 000 zł zaliczam na poczet Partnerstwa</b>, jeśli startujemy w ciągu 60 dni.</li>
+        <div class="kdz"><em>Kupujesz</em><p>Przegląd Twojej firmy pod kątem AI i automatyzacji: rozmowy z kluczowymi osobami, procesy, liczby.</p></div>
+        <div class="kdz"><em>Dostajesz</em><ul>
+          <li>5–7 rzeczy do zautomatyzowania</li>
+          <li>przy każdej: ile godzin miesięcznie odzyskasz</li>
+          <li>ile kosztuje wdrożenie i w jakiej kolejności</li>
         </ul></div>
-        <p class="rez"><b>Co z tego masz</b>Wiesz, od czego zacząć i ile to kosztuje — z kolejnością i ceną każdego kroku.</p>
+        <p class="rez"><b>Zyskujesz</b>Plan na 12 miesięcy z liczbami. Realizujesz go ze mną albo sam. Jeśli zaczniemy współpracę w ciągu 60 dni, 8 000 zł odliczam od Partnerstwa.</p>
         <a href="https://cal.com/szymonswillo/diagnoza" class="btn btn-c" target="_blank" rel="noopener">Umów rozmowę</a>
       </div>
 
-      <div class="ok">
-        <span class="of-l">Krok 2 · projekt o stałej cenie</span>
-        <h3>Wdrożenie AI</h3>
-        <div class="cena">od 6 900 zł <s>netto</s></div>
-        <ul class="pak">
-          <li><b>Start</b><strong>6 900 zł</strong><span>Jeden proces w narzędziach, których już używasz — np. oferty, maile, raport tygodniowy. Do 2 tygodni.</span></li>
-          <li><b>Proces</b><strong>11 900 zł</strong><span>Jeden proces z integracją z Twoim CRM, ERP albo sklepem — np. faktury z PDF do systemu. 3–5 tygodni.</span></li>
-          <li><b>Indywidualne</b><strong>od 15 000 zł</strong><span>Kilka procesów, większa integracja albo asystent wiedzy firmowej.</span></li>
-        </ul>
-        <div class="zakres"><ul>
-          <li><b>Pomiar przed i po 30 dniach</b> — na tych samych liczbach.</li>
-          <li><b>90 dni gwarancji</b> i poprawek w cenie, instrukcja i przeszkolony zespół.</li>
-          <li>Potem <b>Opieka AI od 1 500 zł/mies.</b> — zmiany, nie naprawy.</li>
-        </ul></div>
-        <p class="rez"><b>Co z tego masz</b>Jeden proces przestaje zajmować ludzi. Różnica jest policzona.</p>
-        <a href="https://cal.com/szymonswillo/diagnoza" class="btn btn-c" target="_blank" rel="noopener">Umów rozmowę</a>
-      </div>
-    </div>
-
-    <div class="ok wyr ok-szer">
-      <span class="znacznik">Najwięcej zmiany</span>
-      <div class="wst">
+      <div class="ok wyr">
+        <span class="znacznik">Najwięcej zmiany</span>
         <span class="of-l">Krok 3 · stała współpraca</span>
         <h3>Partnerstwo 3S</h3>
-        <div class="cena">od 7 500 zł <s>netto / mies.</s></div>
-        <p class="rez"><b>Co z tego masz</b>Decyzje przestają czekać na Ciebie, a automatyzacje są budowane i pilnowane co miesiąc — nie raz na projekt.</p>
-        <p class="limit">Minimum 3 miesiące · maksymalnie 6 firm jednocześnie</p>
+        <div class="cena">7 000–10 000 zł <s>netto / mies.</s></div>
+        <div class="kdz"><em>Kupujesz</em><p>Zewnętrznego dyrektora operacyjnego i AI na stałe — bez etatu i bez rekrutacji.</p></div>
+        <div class="kdz"><em>Dostajesz</em><ul>
+          <li>stałe spotkania z Tobą — co tydzień albo co dwa tygodnie</li>
+          <li>wdrożenia AI w cenie, w uzgodnionym rytmie</li>
+          <li>opiekę nad wszystkim, co zbudowałem</li>
+          <li>raport co miesiąc: co odzyskaliśmy, w liczbach</li>
+        </ul></div>
+        <p class="rez"><b>Zyskujesz</b>Co miesiąc jedna ważna rzecz doprowadzona do końca, a godziny wracają do zespołu. Policzone, nie obiecane.</p>
+        <p class="limit">Cena zależy od rytmu i zakresu · minimum 3 miesiące · maks. 6 firm</p>
         <a href="https://cal.com/szymonswillo/diagnoza" class="btn" target="_blank" rel="noopener">Umów rozmowę</a>
-      </div>
-      <div class="poz">
-        <span class="poz-t">Co dwa tygodnie</span>
-        <h4>Partner</h4>
-        <div class="cena">7 500 zł <s>netto / mies.</s></div>
-        <div class="zakres"><ul>
-          <li><b>Sesja 90 minut co dwa tygodnie</b> w stałym terminie.</li>
-          <li><b>2 dni mojej pracy</b> w miesiącu dla Twojej firmy.</li>
-          <li><b>1 wdrożenie w kwartale</b> — do 20 godzin pracy.</li>
-          <li>Opieka nad wszystkim, co zbudowałem — w cenie.</li>
-          <li>Raport miesięczny na jednej stronie.</li>
-        </ul></div>
-      </div>
-      <div class="poz mocny">
-        <span class="poz-t">Co tydzień</span>
-        <h4>Partner Wykonawczy</h4>
-        <div class="cena">11 900 zł <s>netto / mies.</s></div>
-        <div class="zakres"><ul>
-          <li><b>Sesja 90 minut co tydzień</b> w stałym terminie.</li>
-          <li><b>4 dni mojej pracy</b> w miesiącu, na miejscu, gdy wymaga tego sytuacja.</li>
-          <li><b>1 wdrożenie co dwa miesiące</b> — do 20 godzin każde.</li>
-          <li><b>Sprint Kierunku i AI</b> w pierwszym miesiącu — w cenie.</li>
-          <li>Mandat spisany na jednej stronie, opieka w cenie, odpowiedź do doby.</li>
-        </ul></div>
       </div>
     </div>
 
-    <p class="of-nota">
-      <b>Sprint zaliczam w całości</b> na poczet Partnerstwa, jeśli startujemy w ciągu 60 dni — nie płacisz dwa razy.
-      <b>Każde wdrożenie ma 90 dni gwarancji w cenie.</b> Partnerstwo zawiera opiekę nad wszystkim, co zbuduję.
-      Partnerstwo: minimum 3 miesiące, potem miesięczne wypowiedzenie. Ceny netto.
-    </p>
+    <div class="of-solo">
+      <p><b>Chcesz tylko jedno wdrożenie, bez stałej współpracy?</b> Też można — stała cena od 6 900 zł, 90 dni gwarancji w cenie.</p>
+      <a href="https://cal.com/szymonswillo/diagnoza" class="btn btn-c btn-sm" target="_blank" rel="noopener">Zapytaj o wdrożenie</a>
+    </div>
+    <p class="of-nota">Ceny netto. Partnerstwo: minimum 3 miesiące, potem miesięczne wypowiedzenie. Dokładną cenę Partnerstwa ustalamy po diagnozie albo Sprincie — zależy od tego, jak często się spotykamy i ile wdrożeń planujemy.</p>
   </div>
 </section>
 
@@ -1166,7 +1115,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
     <h2>Najczęstsze pytania.</h2>
     <div class="faq">
       <details><summary>Czym dyrektor operacyjny na godziny różni się od interim managera?</summary><p>Interim manager wchodzi na pełny etat na czas określony i zwykle kogoś zastępuje. Ja pracuję dla Twojej firmy dwa albo cztery dni w miesiącu i nikogo nie zastępuję — dokładam brakującą rolę decyzyjną tam, gdzie dziś wszystko czeka na właściciela.</p></details>
-      <details><summary>Ile jesteś dostępny i jak wygląda Twoja obecność w firmie?</summary><p>Rytm jest stały przez cały kwartał. W Partnerstwie na poziomie <b>Partner</b> to dwa dni robocze w miesiącu i <b>90 minut z Tobą co dwa tygodnie</b>. Na poziomie <b>Partner Wykonawczy</b> — jeden dzień w tygodniu i <b>90 minut co tydzień</b>, w osobnym stałym terminie, na przegląd decyzji i priorytety. Na miejscu jestem wtedy, gdy sytuacja tego wymaga — start wdrożenia, rozmowy z zespołem, trudna decyzja. Kiedy praca tego nie potrzebuje, robię ją zdalnie, bo wtedy zwyczajnie więcej z niej wychodzi.</p>
+      <details><summary>Ile jesteś dostępny i jak wygląda Twoja obecność w firmie?</summary><p>Rytm jest stały przez cały kwartał i wybierasz go na starcie: <b>co dwa tygodnie</b> — dwa dni robocze w miesiącu i 90 minut z Tobą co dwa tygodnie — albo <b>co tydzień</b> — jeden dzień w tygodniu i 90 minut z Tobą co tydzień, w osobnym stałym terminie, na przegląd decyzji i priorytety. Na miejscu jestem wtedy, gdy sytuacja tego wymaga — start wdrożenia, rozmowy z zespołem, trudna decyzja. Kiedy praca tego nie potrzebuje, robię ją zdalnie, bo wtedy zwyczajnie więcej z niej wychodzi.</p>
         <p>Stały rytm jest połową wartości: bez niego terminy przesuwają się przy pierwszym pożarze i po kwartale nic się nie zmienia.</p><p style="padding-bottom:26px">Prowadzę <b>maksymalnie sześć firm jednocześnie</b>. To nie jest zabieg marketingowy — przy większej liczbie nie znałbym kontekstu żadnej z nich na tyle, żeby podejmować decyzje operacyjne zamiast Ciebie.</p></details>
       <details><summary>Kiedy to ma sens zamiast zatrudnienia dyrektora operacyjnego na etat?</summary><p>Gdy firma potrzebuje decyzji i porządku, ale nie ma jeszcze skali na pełny etat — albo gdy nie wiadomo, jakiej dokładnie roli szukać. Po kilku miesiącach zwykle wiadomo jedno i drugie, a rekrutacja staje się dużo prostsza.</p></details>
       <details><summary>Czy 3S jest doradcą czy wykonawcą?</summary><p>Łączę obie role. Najpierw pomagam podjąć dobrą decyzję, a potem wdrażam rozwiązanie albo prowadzę zespół przez wdrożenie.</p></details>
@@ -1174,6 +1123,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
       <details><summary>Czy to nie jest kolejna moda na AI?</summary><p>Uzasadniona obawa. Dlatego nie sprzedaję technologii, tylko odzyskane godziny — policzone przed wdrożeniem i po nim, na tych samych liczbach. Narzędzie dobieram sam i czasem okazuje się, że wystarczy zmiana sposobu pracy bez żadnego AI. Jeśli po pomiarze nie widać różnicy, wdrożenie było nieudane i tak to nazywam.</p></details>
       <details><summary>Czy możesz wykorzystać systemy, które już mamy?</summary><p>Tak. Najpierw sprawdzam, czy obecne narzędzia można lepiej skonfigurować lub połączyć. Nowe proponuję dopiero wtedy, gdy to konieczne.</p></details>
       <details><summary>Czy moje dane są bezpieczne?</summary><p>Przed dostępem do danych podpisujemy umowę o poufności i powierzenie danych. Pracuję na kontach Twojej firmy, z minimalnymi uprawnieniami i tylko na danych, których proces naprawdę potrzebuje. Wszystko, co wychodzi do klienta albo dotyczy pieniędzy, zatwierdza człowiek.</p></details>
+      <details><summary>Czy mogę zamówić samo wdrożenie, bez Partnerstwa?</summary><p>Tak. Jeden proces za stałą cenę od 6 900 zł, ustaloną przed startem — z pomiarem przed i po oraz 90 dniami gwarancji w cenie. Po gwarancji możesz zostać pod moją opieką od 1 500 zł miesięcznie albo dalej prowadzić to sam.</p></details>
       <details><summary>Ile kosztuje utrzymanie automatyzacji?</summary><p>Licencje i koszty API są na kontach Twojej firmy i podaję je w wycenie przed startem, więc nie ma niespodzianek. Moja praca po 90 dniach gwarancji to Opieka AI od 1 500 zł miesięcznie — albo nic dodatkowo, jeśli jesteś w Partnerstwie.</p></details>
       <details><summary>Dlaczego Partnerstwo ma minimum trzy miesiące?</summary><p>Bo pierwszy policzony efekt widać zwykle po sześciu do dziesięciu tygodniach. Krótsza współpraca kończy się przed wynikiem — a ja wolę być oceniany po wyniku. Po trzech miesiącach obowiązuje miesięczne wypowiedzenie.</p></details>
       <details><summary>Co otrzymam po pierwszym płatnym etapie?</summary><p>Konkretny rezultat: mapę decyzji lub diagnozę z priorytetami, miernikami i planem. Nie samą rozmowę i nie prezentację.</p></details>
@@ -1293,7 +1243,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
 
   var REK={
     sprint:{
-      n:'Sprint Kierunku i AI',
+      n:'Sprint AI',
       s:'Trzy tygodnie, po których wiesz, od czego zacząć i ile to kosztuje.',
       w:'Twoje odpowiedzi układają się w jeden wzór: <b>masz objawy, ale nie masz jeszcze rozpoznania</b>. '+
         'W takiej sytuacji każde wdrożenie jest zakładem — może trafić w przyczynę, a równie dobrze w skutek. '+
@@ -1308,7 +1258,7 @@ footer{background:var(--noc);border-top:1px solid var(--linia-j);padding:38px 0}
         'Jednorazowa analiza tego nie naprawi, bo za miesiąc wróci dokładnie ten sam mechanizm. '+
         'Potrzebny jest ktoś, kto jest przy tym co tydzień i nie ma interesu w Twojej odpowiedzi.',
       l:['Sesja 90 minut co tydzień albo co dwa tygodnie — decyzje, nie status',
-         'Wdrożenia AI w stałym rytmie, opieka nad nimi w cenie',
+         'Wdrożenia AI w cenie i opieka nad nimi — od 7 000 do 10 000 zł miesięcznie',
          'Spojrzenie z zewnątrz, poza układem zależności w firmie']},
     wdrozenie:{
       n:'Wdrożenie AI',
